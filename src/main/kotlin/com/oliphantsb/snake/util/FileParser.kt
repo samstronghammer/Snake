@@ -37,7 +37,6 @@ object FileParser {
           else -> {
             try {
               val d = Direction.fromAscii(char)
-              println(char)
               when {
                 snake1 == null -> snake1 = Snake(board.get(row, col), d, board, SnakeColor.GREEN)
                 snake2 == null -> snake2 = Snake(board.get(row, col), d, board, SnakeColor.YELLOW)

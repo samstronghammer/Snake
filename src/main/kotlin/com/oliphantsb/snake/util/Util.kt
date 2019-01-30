@@ -8,7 +8,7 @@ import javax.swing.ImageIcon
 object Util {
 
   val APPLE_VALUE = 3
-  val ICON_SIZE = 32
+  val ICON_SIZE = 16
   val SCALE = 1.0
 
 
@@ -23,7 +23,7 @@ object Util {
     return type.getPrefix() + filename
   }
 
-  fun getIcon(fileName: String): Icon {
+  private fun getIcon(fileName: String): Icon {
     ImageIcon()
     return ImageIcon(ImageIcon(Unit::class.java.classLoader.getResource(getResourceLocation(fileName, ResourceType.SPRITE))!!)
         .image.getScaledInstance(Util.ICON_SIZE, Util.ICON_SIZE, Image.SCALE_DEFAULT))

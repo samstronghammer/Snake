@@ -21,9 +21,17 @@ object JFrameFiller {
     frame.isVisible = true
   }
 
-  fun preGame() {
+  fun preGame(score1: Int? = null, score2: Int? = null) {
     clear()
     pane.layout = BoxLayout(pane, BoxLayout.Y_AXIS)
+    score1?.let { s1 ->
+      if (score2 == null) {
+        pane.add(JLabel("${Strings.SCORE}: $s1"))
+      } else {
+        pane.add(JLabel("${Strings.GREEN} ${Strings.SCORE}: $s1"))
+        pane.add(JLabel("${Strings.YELLOW} ${Strings.SCORE}: $score2"))
+      }
+    }
     val listparts = addList(FileParser.getResourceListing(ResourceType.MAP).toTypedArray())
     val b1 = JButton(Strings.PLAY)
     b1.addActionListener {
@@ -57,13 +65,6 @@ object JFrameFiller {
     Game(gameparts.first, gameparts.second, gameparts.third).run()
   }
 
-  fun endGame(p1: Int, p2: Int?) {
-    clear()
-    pane.layout = BoxLayout(pane, BoxLayout.Y_AXIS)
-
-    //TODO
-  }
-
   private fun addList(items: Array<String>): Pair<JScrollPane, JList<String>> {
     val jlist = JList(items)
     val scrollPane = JScrollPane(jlist)
@@ -74,6 +75,7 @@ object JFrameFiller {
   private fun clear() {
     pane.removeAll()
     frame.removeKeyListener(listener)
+    pane.preferredSize = null
   }
 
   fun update() {
@@ -83,7 +85,6 @@ object JFrameFiller {
   }
 
   fun addKeyListener(keyListener: KeyListener) {
-    println("Adding key listener")
     frame.addKeyListener(keyListener)
     listener = keyListener
   }
