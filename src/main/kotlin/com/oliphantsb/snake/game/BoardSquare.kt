@@ -21,7 +21,11 @@ class BoardSquare(val row: Int, val col: Int) {
   }
 
   fun isOpen(): Boolean {
-    return contents == SquareContents.EMPTY
+    return contents == SquareContents.EMPTY || contents == SquareContents.APPLE
+  }
+
+  fun hasApple(): Boolean {
+    return contents == SquareContents.APPLE
   }
 
   fun setContents(newContents: SquareContents, newSnake: SnakeColor? = null) {
@@ -45,6 +49,7 @@ class BoardSquare(val row: Int, val col: Int) {
       SquareContents.EMPTY -> Util.floor_icon
       SquareContents.WALL -> Util.wall_icon
       SquareContents.SNAKE -> snake?.getIcon() ?: throw IllegalStateException("Board square must have snake color if it contains a snake.")
+      SquareContents.APPLE -> Util.apple_icon
     }
   }
 

@@ -57,9 +57,10 @@ object JFrameFiller {
     Game(gameparts.first, gameparts.second, gameparts.third).run()
   }
 
-  private fun endGame() {
+  fun endGame(p1: Int, p2: Int?) {
     clear()
     pane.layout = BoxLayout(pane, BoxLayout.Y_AXIS)
+
     //TODO
   }
 

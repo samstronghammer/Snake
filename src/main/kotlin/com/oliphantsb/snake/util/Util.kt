@@ -14,8 +14,9 @@ object Util {
 
   val wall_icon = getIcon("wallicon.png")
   val floor_icon = getIcon("flooricon.png")
-  val snake1_icon = getIcon("snake1.png")
-  val snake2_icon = getIcon("snake2.png")
+  val snake1_icon = getIcon("yellowsnakeicon.png")
+  val snake2_icon = getIcon("greensnakeicon.png")
+  val apple_icon = getIcon("appleicon.png")
 
 
   fun getResourceLocation(filename: String, type: ResourceType): String {

@@ -8,14 +8,22 @@ import kotlin.concurrent.fixedRateTimer
 
 class Game(val board: Board, val snake1: Snake, val snake2: Snake?) {
 
+
+
   fun run() {
+    snake2?.let { println("Snake 2 present") }
     JFrameFiller.addKeyListener(UserInputHandler())
-    fixedRateTimer(period = 1000) {
+    fixedRateTimer(period = 200) {
       JFrameFiller.update()
       snake1.removeEnd()
       snake2?.removeEnd()
-      snake1.incrementHead()
-      snake2?.incrementHead()
+      val over = snake1.incrementHead() || snake2?.incrementHead() == true
+      if (over) {
+        this.cancel()
+        JFrameFiller.endGame(snake1.score(), snake2?.score())
+      } else {
+        board.updateApple()
+      }
     }
   }
 
