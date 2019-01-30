@@ -16,8 +16,6 @@ import java.util.jar.JarFile
 
 object FileParser {
 
-  data class Pair(val row: Int, val col: Int)
-
   fun parseMap(filename: String): Triple<Board, Snake, Snake?> {
     val lines = BufferedReader(InputStreamReader(FileParser.javaClass.classLoader.getResourceAsStream(Util.getResourceLocation(filename, ResourceType.MAP)))).readLines()
     val numRows = lines.size
@@ -60,16 +58,13 @@ object FileParser {
   fun getResourceListing(type: ResourceType): List<String> {
     val path = type.getPrefix()
     val jarFile = File(javaClass.protectionDomain.codeSource.location.path)
-    println(jarFile)
     val result = mutableListOf<String>()
     if (jarFile.isFile) {  // Run with JAR file
-      println("Is jar file.")
       val jar = JarFile(jarFile)
       val entries = jar.entries() //gives ALL entries in jar
       while (entries.hasMoreElements()) {
         val name = entries.nextElement().name
         if (name.startsWith(path) && name != path) { //filter according to the path
-          println(name)
           result.add(name.removePrefix(path))
         }
       }
@@ -81,11 +76,9 @@ object FileParser {
   }
 
   private fun getResourceFiles(path: String): List<String> = getResourceAsStream(path).use{
-    println("$it")
     if(it == null) {
       return emptyList()
     } else {
-      println("Made it here")
       BufferedReader(InputStreamReader(it)).readLines()
     }
   }

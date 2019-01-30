@@ -13,9 +13,10 @@ class BoardSquare(val row: Int, val col: Int) {
 
   private var contents = SquareContents.EMPTY
   private var snake: SnakeColor? = null
-  private var icon: JLabel = JLabel(Util.floor_icon)
+  private var icon: JLabel = JLabel()
 
   init {
+    icon.icon = getIcon()
     icon.setBounds(col * Util.ICON_SIZE, row * Util.ICON_SIZE, Util.ICON_SIZE, Util.ICON_SIZE)
   }
 

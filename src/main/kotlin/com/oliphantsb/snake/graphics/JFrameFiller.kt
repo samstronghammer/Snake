@@ -4,6 +4,8 @@ import com.oliphantsb.snake.enums.ResourceType
 import com.oliphantsb.snake.game.Game
 import com.oliphantsb.snake.util.FileParser
 import com.oliphantsb.snake.util.Strings
+import com.oliphantsb.snake.util.Util
+import java.awt.Dimension
 import java.awt.event.KeyListener
 import java.awt.event.WindowEvent
 import javax.swing.*
@@ -25,8 +27,9 @@ object JFrameFiller {
     val listparts = addList(FileParser.getResourceListing(ResourceType.MAP).toTypedArray())
     val b1 = JButton(Strings.PLAY)
     b1.addActionListener {
-      val mapName = listparts.second.selectedValue
-      startGame(mapName)
+      listparts.second.selectedValue?.let {
+        startGame(it)
+      }
     }
     val b2 = JButton(Strings.HELP)
     b2.addActionListener {
@@ -45,13 +48,18 @@ object JFrameFiller {
 
   private fun startGame(mapName: String) {
     clear()
+    pane.layout = null
     val gameparts = FileParser.parseMap(mapName)
     gameparts.first.initializeIcons(pane)
+    pane.preferredSize = Dimension(gameparts.first.cols * Util.ICON_SIZE,
+        gameparts.first.rows * Util.ICON_SIZE)
+    update()
     Game(gameparts.first, gameparts.second, gameparts.third).run()
   }
 
   private fun endGame() {
     clear()
+    pane.layout = BoxLayout(pane, BoxLayout.Y_AXIS)
     //TODO
   }
 
@@ -70,9 +78,11 @@ object JFrameFiller {
   fun update() {
     frame.pack()
     frame.repaint()
+    frame.requestFocus()
   }
 
   fun addKeyListener(keyListener: KeyListener) {
+    println("Adding key listener")
     frame.addKeyListener(keyListener)
     listener = keyListener
   }

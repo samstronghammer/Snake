@@ -1,10 +1,10 @@
 package com.oliphantsb.snake.game
 
 import com.oliphantsb.snake.enums.SquareContents
+import com.oliphantsb.snake.util.Util
 import java.awt.Container
-import javax.swing.JPanel
 
-class Board(private val rows: Int, private val cols: Int) {
+class Board(val rows: Int, val cols: Int) {
 
   private val board: List<List<BoardSquare>>
 
@@ -32,10 +32,10 @@ class Board(private val rows: Int, private val cols: Int) {
   }
 
   fun get(row: Int, col: Int): BoardSquare {
-    return board[row % rows][col % cols]
+    return board[Util.posmod(row, rows)][Util.posmod(col, cols)]
   }
 
-  fun applyToSquares(function: (BoardSquare) -> Unit) {
+  private fun applyToSquares(function: (BoardSquare) -> Unit) {
     for (list in board) {
       for (square in list) {
         function(square)

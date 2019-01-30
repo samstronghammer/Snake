@@ -11,6 +11,7 @@ class Game(val board: Board, val snake1: Snake, val snake2: Snake?) {
   fun run() {
     JFrameFiller.addKeyListener(UserInputHandler())
     fixedRateTimer(period = 1000) {
+      JFrameFiller.update()
       snake1.removeEnd()
       snake2?.removeEnd()
       snake1.incrementHead()
@@ -23,6 +24,7 @@ class Game(val board: Board, val snake1: Snake, val snake2: Snake?) {
     override fun keyTyped(e: KeyEvent) {}
 
     override fun keyPressed(e: KeyEvent) {
+      println("Key pressed: ${e.keyChar}")
       snake1.turn(when(e.keyCode) {
         37 -> Direction.LEFT
         38 -> Direction.UP

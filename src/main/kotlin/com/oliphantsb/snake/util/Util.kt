@@ -8,7 +8,7 @@ import javax.swing.ImageIcon
 object Util {
 
   val APPLE_VALUE = 3
-  val ICON_SIZE = 8
+  val ICON_SIZE = 32
   val SCALE = 1.0
 
 
@@ -26,6 +26,10 @@ object Util {
     ImageIcon()
     return ImageIcon(ImageIcon(Unit::class.java.classLoader.getResource(getResourceLocation(fileName, ResourceType.SPRITE))!!)
         .image.getScaledInstance(Util.ICON_SIZE, Util.ICON_SIZE, Image.SCALE_DEFAULT))
+  }
+
+  fun posmod(a: Int, b: Int): Int {
+    return ((a % b) + b) % b
   }
 
 }

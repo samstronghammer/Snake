@@ -1,7 +1,6 @@
 package com.oliphantsb.snake.util
 
 import com.oliphantsb.snake.graphics.JFrameFiller
-import javax.swing.JFrame
 
 class Main {
 
