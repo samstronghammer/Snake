@@ -1,6 +1,8 @@
 package com.oliphantsb.snake.game
 
 import com.oliphantsb.snake.enums.SquareContents
+import java.awt.Container
+import javax.swing.JPanel
 
 class Board(private val rows: Int, private val cols: Int) {
 
@@ -12,10 +14,17 @@ class Board(private val rows: Int, private val cols: Int) {
       val sublist = mutableListOf<BoardSquare>()
       list.add(sublist)
       for (c in 0..cols) {
-        sublist.add(BoardSquare(r, c))
+        val newSquare = BoardSquare(r, c)
+        sublist.add(newSquare)
       }
     }
     board = list
+  }
+
+  fun initializeIcons(pane: Container) {
+    applyToSquares { square ->
+      square.addIcon(pane)
+    }
   }
 
   fun addBlockage(row: Int, col: Int) {
@@ -24,6 +33,14 @@ class Board(private val rows: Int, private val cols: Int) {
 
   fun get(row: Int, col: Int): BoardSquare {
     return board[row % rows][col % cols]
+  }
+
+  fun applyToSquares(function: (BoardSquare) -> Unit) {
+    for (list in board) {
+      for (square in list) {
+        function(square)
+      }
+    }
   }
 
 }

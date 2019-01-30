@@ -1,10 +1,11 @@
 package com.oliphantsb.snake.game
 
 import com.oliphantsb.snake.enums.Direction
+import com.oliphantsb.snake.enums.SnakeColor
 import com.oliphantsb.snake.enums.SquareContents
 import java.util.*
 
-class Snake(var head: BoardSquare, var direction: Direction, val board: Board) {
+class Snake(var head: BoardSquare, var direction: Direction, val board: Board, val snakeColor: SnakeColor) {
 
   private val squares: LinkedList<BoardSquare> = LinkedList()
   private var growth = 0
@@ -12,7 +13,7 @@ class Snake(var head: BoardSquare, var direction: Direction, val board: Board) {
   init {
     squares.add(head)
   }
-  //TODO return true if dead
+
   fun removeEnd(): Boolean {
     if (growth == 0) {
       if (squares.size > 0) {
@@ -28,11 +29,12 @@ class Snake(var head: BoardSquare, var direction: Direction, val board: Board) {
   }
 
   fun incrementHead() {
-    val rowCol = direction.applyToRowCol(Pair(squares[0].row, squares[0].col))
+    val rowCol = direction.applyToRowCol(Pair(head.row, head.col))
     val newSquare = board.get(rowCol.first, rowCol.second)
     if (newSquare.isOpen()) {
       head = newSquare
       squares.addFirst(head)
+      head.setContents(SquareContents.SNAKE, snakeColor)
     }
   }
 

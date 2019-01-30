@@ -4,6 +4,9 @@ object Strings {
 
   val SINGLE_PLAYER = "Single player"
   val TWO_PLAYER = "Two player"
+  val PLAY = "Play"
+  val QUIT = "Quit"
+  val HELP = "Help"
   val INSTRUCTIONS =
       """Player 1: You are red. Change direction with the arrow keys.
             |Player 2: You are blue. Change direction with WASD.""".trimMargin()

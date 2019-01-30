@@ -1,5 +1,9 @@
 package com.oliphantsb.snake.enums
 
+import com.oliphantsb.snake.exceptions.EnumException
+
 enum class SquareContents {
-  SNAKE1, SNAKE2, WALL, EMPTY
+
+  SNAKE, WALL, EMPTY;
+
 }

@@ -2,6 +2,7 @@ package com.oliphantsb.snake.util
 
 import com.oliphantsb.snake.enums.Direction
 import com.oliphantsb.snake.enums.ResourceType
+import com.oliphantsb.snake.enums.SnakeColor
 import com.oliphantsb.snake.exceptions.EnumException
 import com.oliphantsb.snake.exceptions.MapFormatException
 import com.oliphantsb.snake.game.Board
@@ -39,8 +40,8 @@ object FileParser {
             try {
               val d = Direction.fromAscii(char)
               when {
-                snake1 == null -> snake1 = Snake(board.get(row, col), d, board)
-                snake2 == null -> Snake(board.get(row, col), d, board)
+                snake1 == null -> snake1 = Snake(board.get(row, col), d, board, SnakeColor.GREEN)
+                snake2 == null -> Snake(board.get(row, col), d, board, SnakeColor.YELLOW)
                 else -> throw MapFormatException("Too many snakes. Currently only two per map are supported.")
               }
             } catch (e: EnumException) {
