@@ -21,7 +21,8 @@ class Board(val rows: Int, val cols: Int) {
       }
     }
     board = list
-    apple = get(0, 0)
+    apple = getRandomOpenSquare()
+    apple.setContents(SquareContents.APPLE)
   }
 
   fun initializeIcons(pane: Container) {
@@ -48,11 +49,17 @@ class Board(val rows: Int, val cols: Int) {
 
   fun updateApple() {
     if (!apple.hasApple()) {
-      while (!apple.isOpen()) {
-        apple = get((rows * Math.random()).roundToInt(), (cols * Math.random()).roundToInt())
-      }
+      apple = getRandomOpenSquare()
       apple.setContents(SquareContents.APPLE)
     }
+  }
+
+  private fun getRandomOpenSquare(): BoardSquare {
+    var square: BoardSquare? = null
+    while (square?.isOpen() != true) {
+      square = get((rows * Math.random()).roundToInt(), (cols * Math.random()).roundToInt())
+    }
+    return square
   }
 
 }
