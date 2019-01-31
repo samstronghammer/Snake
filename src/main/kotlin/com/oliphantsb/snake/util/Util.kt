@@ -10,6 +10,8 @@ object Util {
   val APPLE_VALUE = 3
   val ICON_SIZE = 16
   val SCALE = 1.0
+  val MIN_MILLIS_PER_FRAME = 20
+  val SECS_PER_LEVEL = 15
 
 
   val wall_icon = getIcon("wallicon.png")
