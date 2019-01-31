@@ -1,5 +1,3 @@
-target
-target/**
-.idea
-.idea/**
+target/
+.idea/
 Snake.iml
