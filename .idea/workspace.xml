@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="975f0702-9510-4a2d-8966-b6ad1edc7173" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Board.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Board.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oliphantsb/snake/game/Board$initializeIcons$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oliphantsb/snake/game/Board$initializeIcons$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oliphantsb/snake/game/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/oliphantsb/snake/game/Board.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oliphantsb/snake/game/Game$run$$inlined$fixedRateTimer$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maps/single_player.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/maps/single_player.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maps/single_player.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maps/single_player.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/snake-1.0-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/snake-1.0-jar-with-dependencies.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/snake-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/snake-1.0.jar" afterDir="false" />
     </list>
@@ -39,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="single_player.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="single_player.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/maps/single_player.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="218">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -60,8 +58,8 @@
       <file leaf-file-name="Game.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Game.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            <state relative-caret-position="374">
+              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="e#35#233#0" expanded="true" />
               </folding>
@@ -72,8 +70,8 @@
       <file leaf-file-name="Util.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Util.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="98">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="e#35#156#0" expanded="true" />
               </folding>
@@ -81,7 +79,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Board.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Board.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
@@ -151,10 +149,10 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/FileParser.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Strings.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/graphics/JFrameFiller.kt" />
-        <option value="$PROJECT_DIR$/src/main/resources/maps/single_player.txt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Util.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Game.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Board.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Util.kt" />
+        <option value="$PROJECT_DIR$/src/main/resources/maps/single_player.txt" />
       </list>
     </option>
   </component>
@@ -190,7 +188,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1285" />
     <option name="height" value="931" />
@@ -440,12 +438,12 @@
       <option name="presentableId" value="Default" />
       <updated>1548770977645</updated>
       <workItem from="1548770981916" duration="12606000" />
-      <workItem from="1548794134449" duration="30783000" />
+      <workItem from="1548794134449" duration="31899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43389000" />
+    <option name="totallyTimeSpent" value="44505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1285" height="931" extended-state="0" />
@@ -731,37 +729,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Util.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="e#35#156#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/FileParser.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/maps/single_player.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Game.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding>
-            <element signature="e#35#233#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,6 +743,33 @@
           <folding>
             <element signature="e#35#177#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/game/Game.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#35#233#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/oliphantsb/snake/util/Util.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#35#156#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/maps/single_player.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
         </state>
       </provider>
     </entry>
